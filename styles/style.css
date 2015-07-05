@@ -311,6 +311,43 @@ pre {
     vertical-align: middle;
     width: 50%;
 }
+
+.row {
+    padding-top: 2rem;
+    display: table;
+    width: 100%;
+}
+
+.column {
+    display: table-cell;
+    color: hsl(212, 0%, 40%);
+    position: relative;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.row-title {
+    position: relative;
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    vertical-align: middle;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.4rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.come {
+    margin-top: 4rem;
+    text-align: center;
+}
 /*------------------ FOOTER PAGE ----------------------*/
 
 footer {
