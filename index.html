@@ -32,7 +32,7 @@
                 <div class="col">
                     <h1 class="col-text-title col-padding-left">An extensible, declarative node framework</h1>
                     <div class="col-img el-left"></div>
-                    <div class="col-text col-padding-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et arcu a mi imperdiet pharetra ac id est. Integer aliquam dolor id mollis efficitur. Sed facilisis tincidunt ligula non euismod. Nulla ut neque id metus feugiat convallis.</div>
+                    <div class="col-text col-padding-left">Sealious is an application-development framework. It can be used to create a web application (with the help of <a style="color:#0086b3;" href="http://github.com/sealious/sealious-www-server">sealious-www-server</a> module), as well as a desktop app (in conjunction with NW.js or Electron).</div>
                 </div>
             </div>
         </div>
@@ -41,61 +41,24 @@
         <div class="wrapper">
             <div class="content" id="get-started">
                 <div class="box">
-                    <h1 class="box-text-title" style="width: 100%;">Example sealious rest implementation</h1>
-                    <div class="box-text" style="width: 100%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et arcu a mi imperdiet pharetra ac id est. Integer aliquam dolor id mollis efficitur. Sed facilisis tincidunt ligula non euismod. Nulla ut neque id metus feugiat convallis.</div>
-                    <div class="box-code main-js-code">
-                        <pre>
-<span style='color:#a71d5d;'>var</span> path <span style='color:#308080; '>=</span><span style='color:#0086b3;'> require</span><span style='color:#308080; '>(</span><span style='color:#183691; '>"path"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-<span style='color:#a71d5d;'>var</span> Sealious <span style='color:#308080; '>=</span><span style='color:#0086b3;'> require</span><span style='color:#308080; '>(</span><span style='color:#183691; '>"sealious"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-<span style='color:#a71d5d;'>var</span> app <span style='color:#308080; '>=</span> <span style='color:#a71d5d  ;'>new</span><span style='color: #795da3;'> Sealious.App</span><span style='color:#308080; '>(</span><span style='color:#0086b3; '>__dirname</span><span style='color:#308080; '>+</span><span style='color:#183691; '>"/package.json"</span><span style='color:#595979; '></span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-<span style='color:#a71d5d;'>
-var</span> form_entry <span style='color:#308080; '>=</span> <span style='color:#a71d5;'>new</span><span style='color: #795da3;'> Sealious.ChipTypes</span><span style='color:#308080; '>.</span>ResourceType<span style='color:#308080; '>(</span><span style='color:#183691; '>"form_entry"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>  
-form_entry<span style='color:#308080; '>.</span>add_fields<span style='color:#308080; '>(</span><span style='color:#308080; '>[</span>
-    <span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"first-name"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
-    <span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"last-name"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
-    <span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"PESEL"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#406080; '>}</span>
-<span style='color:#308080; '>]</span><span style='color:#308080; '>)</span>
-<span style='color:#a71d5d;'>
-var</span> rest <span style='color:#308080; '>=</span> app<span style='color:#308080; '>.</span>ChipManager<span style='color:#308080; '>.</span>get_chip<span style='color:#308080; '>(</span><span style='color:#183691; '>"channel"</span><span style='color:#308080; '>,</span> <span style='color:#183691; '>"rest"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-rest<span style='color:#308080; '>.</span>add_path<span style='color:#308080; '>(</span><span style='color:#183691; '>"/api/v1/form_entry"</span><span style='color:#308080; '>,</span> <span style='color:#183691; '>"form_entry"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-
-app<span style='color:#308080; '>.</span><span style='color:#0086b3;'>start</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-</pre>
-                    </div>
-                </div>
-                <div class="box">
-                    <h1 class="box-text-title el-padding-right">Create your own modules</h1>
+                    <h1 class="box-text-title el-padding-right">Sealious application</h1>
                     <div class="box-code el-right">
                         <pre>
-<span style='color:#0086b3;'>module</span><span style='color:#808030; '>.</span><span style='color:#183691;'>require </span><span style='color:#808030; '>=</span> <span style='color:#a71d5d;'>function</span><span style='color:#808030; '>(</span>chat_message<span style='color:#808030; '>)</span><span style='color:#800080; '>{</span>
-    chat_message<span style='color:#808030; '>.</span>add_fields<span style='color:#808030; '>(</span><span style='color:#808030; '>[</span>
-        <span style='color:#800080; '>{</span>name<span style='color:#800080; '>:</span> <span style='color:#183691; '>"form"</span><span style='color:#808030; '>,</span> type<span style='color:#800080; '>:</span> <span style='color:#183691; '>"text"</span> <span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>
-        <span style='color:#800080; '>{</span>name<span style='color:#800080; '>:</span> <span style='color:#183691; '>"message"</span><span style='color:#808030; '>,</span> type<span style='color:#800080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#808030; '>,</span> required<span style='color:#800080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>
-        <span style='color:#800080; '>{</span>name<span style='color:#800080; '>:</span> <span style='color:#183691; '>"date"</span><span style='color:#808030; '>,</span> type<span style='color:#800080; '>:</span> <span style='color:#183691; '>"date"</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>
-        <span style='color:#800080; '>{</span>name<span style='color:#800080; '>:</span> <span style='color:#183691; '>"order_in_conversation"</span><span style='color:#808030; '>,</span> type<span style='color:#800080; '>:</span> <span style='color:#183691; '>"int"</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>
-        <span style='color:#800080; '>{</span>name<span style='color:#800080; '>:</span> <span style='color:#183691; '>"conversation_id"</span><span style='color:#808030; '>,</span> type<span style='color:#800080; '>:</span> <span style='color:#183691; '>"int"</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>
-    <span style='color:#808030; '>]</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
-<span style='color:#800080; '>}</span>
+<span style='color:#a71d5d;'>new</span><span style='color: #795da3;'> Sealious.ChipTypes</span><span style='color:#308080; '>.</span>ResourceType<span style='color:#308080; '>(</span><span style='color:#183691; '>"employee", {</span><span style='color:#308080; '></span><span style='color:#406080; '></span>  
+    fields: <span style='color:#308080; '>[</span>
+        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"first-name"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"last-name"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>false</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"photo"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"file"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#406080; '>}</span>
+        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"is-friends-with"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"reference"</span><span style='color:#308080; '>,</span> allowed_types<span style='color:#406080; '>:</span> [<span style='color:#183691; '>"employee"</span><span style='color:#406080; '>]}</span>
+    <span style='color:#308080; '>]</span><span style='color:#308080; '>,</span>
+    access_strategy: <span style='color:#308080; '>{</span>
+        create<span style='color:#406080; '>:</span> <span style='color:#183691; '>"only-admin"</span>,
+        retrieve<span style='color:#406080; '>:</span> <span style='color:#183691; '>"public"</span>
+        }
+<span style='color:#308080; '>});</span>
 </pre>
                     </div>
-                    <div class="box-text el-padding-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et arcu a mi imperdiet pharetra ac id est. Integer aliquam dolor id mollis efficitur. Sed facilisis tincidunt ligula non euismod. Nulla ut neque id metus feugiat convallis.</div>
-                </div>
-                <div class="box">
-                    <h1 class="box-text-title el-padding-right">Easily build applications</h1>
-                    <div class="box-code el-right">
-                        <pre><span style="color: #555555">{</span>
-    <span style="color: #183691;">&quot;name&quot;</span><span style="color: #555555">:</span> <span style="color: #0086d2">&quot;your_app&quot;</span><span style="color: #555555">,</span>
-    <span style="color: #183691;">&quot;uses&quot;</span><span style="color: #555555">:</span> <span style="color: #555555">[</span>
-        <span style="color: #0086d2">&quot;channel.www_server&quot;</span><span style="color: #555555">,</span>
-        <span style="color: #0086d2">&quot;channel.rest&quot;</span>
-    <span style="color: #555555">],</span>
-    <span style="color: #183691;">&quot;defines&quot;</span><span style="color: #555555">:</span> <span style="color: #555555">[</span>
-        <span style="color: #0086d2">&quot;resource_type.chat_message&quot;</span>
-    <span style="color: #555555">]</span>
-<span style="color: #555555">}</span>
-</pre>
-                    </div>
-                    <div class="box-text el-padding-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et arcu a mi imperdiet pharetra ac id est. Integer aliquam dolor id mollis efficitur. Sed facilisis tincidunt ligula non euismod. Nulla ut neque id metus feugiat convallis.</div>
+                    <div class="box-text el-padding-right">Sealious proposes an application architecture that enables creating applications in a highly declarative way. A simple app that would keep information about emplyees needs not much more code than. </div>
                 </div>
             </div>
         </div>
@@ -103,21 +66,32 @@ app<span style='color:#308080; '>.</span><span style='color:#0086b3;'>start</spa
     <div class="page-4">
         <div class="wrapper">
             <div class="content">
-                <div class="col">
-                    <div class="el-left half">
-                        <h1 class="center col-text-title el-padding-right el-padding-left">Pretty cool? Huh!</h1>
-                        <div class="center col-text el-padding-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et arcu a mi imperdiet pharetra ac id est. Integer aliquam dolor id mollis efficitur. Sed facilisis tincidunt ligula non euismod. Nulla ut neque id metus feugiat convallis.</div>
-                    </div>
-                    <div class="el-right half">
-                        <h1 class="center col-text-title el-padding-right el-padding-left">Pretty cool? Huh!</h1>
-                        <div class="center col-text el-padding-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et arcu a mi imperdiet pharetra ac id est. Integer aliquam dolor id mollis efficitur. Sed facilisis tincidunt ligula non euismod. Nulla ut neque id metus feugiat convallis.</div>
+                <div class="row">
+                    <div class="column">
+                        <div class="row-title">Inserting the above code in a Sealious application will cause it to:</div>
+                        <ul>
+                            <li>create the neccessary database schema (we currently support MongoDB, but MySQL (and other db drivers) support is on its way)</li>
+                            <li>publish a JavaScript API for CRUD operations on employee resource type. The api is context-sensitive, that is it will always require information about the user that makes the request to it in order to perform any operation, and based on that context decides whether the operation is permitted for that user, or not. convallis.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="col-1"></div>
-                    <div class="col-2"></div>
-                    <div class="col-3"></div>
+                <div class="row">
+                    <div class="column">
+                        <div class="row-title">If sealious-www-server plugin is installed:</div>
+                        <ul>
+                            <li>the web server will publish a REST-ful API, with access strategies reflecting those described in the access_strategy attribute (only admins can create new entries, but anyone can view the entries). The REST-ful API is standards-compliant and is 100% automatically generated - there's no developer involvement needed.</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-4">
+        <div class="wrapper">
+            <div class="content">
+                <h1 class="come">Quite a lot for such a small amount of code, huh? :)
+                    <a href="http://github.com/sealious/Sealious"><br>Much more? Go to Github!</a>
+                </h1>             
             </div>
         </div>
     </div>
