@@ -209,6 +209,26 @@ p {
     background: url(../img/fishes.svg) no-repeat;
 }
 
+.col-img-placetag {
+    position: relative;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    background: url(../img/logo-placetag.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.placetag {
+    padding-top: 2rem;
+    font-size: 2rem;
+    position: relative;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
 .col-img-left {
     float: left;
 }
