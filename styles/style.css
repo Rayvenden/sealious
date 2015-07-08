@@ -212,9 +212,9 @@ p {
 .col-img-placetag {
     position: relative;
     display: inline-block;
-    height: 5rem;
-    width: 5rem;
-    background: url(../img/logo-placetag.svg);
+    height: 12rem;
+    width: 12rem;
+    background: url(../img/logo-placetag-off.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
