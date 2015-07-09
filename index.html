@@ -3,112 +3,11 @@
 
 <head>
     <title>Sealious</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="robots" content="all" />
-    <link href="styles/fonts.css" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="styles/style-responsive.css" rel="stylesheet" type="text/css">
-    <link href="img/seal.svg" rel="shortcut icon" type="image/x-icon">
+    <META http-equiv="refresh" content="0;URL=http://sealious.github.io/Sealious/">
 </head>
 
 <body>
-    <div class="page-header">
-        <header>
-            <nav></nav>
-            <div class="title">Sealious</div>
-            <div class="title-description">
-                <p class="npm-install-sealious">$ npm install sealious</p>
-                <p class="install-prompt" id="blink">_</p>
-            </div>
-            <a href="#get-started" class="button">Get started</a>
-            <a href="http://github.com/Sealious/Sealious/releases" class="button">Download</a>
-            <a href="http://github.com/sealious/Sealious" class="button">GitHub</a>
-        </header>
-    </div>
-    <div class="page-2">
-        <div class="wrapper">
-            <div class="content">
-                <div class="col">
-                    <h1 class="col-text-title col-padding-left">An extensible, declarative node framework</h1>
-                    <div class="col-img el-left"></div>
-                    <div class="col-text col-padding-left">Sealious is an application-development framework. It can be used to create a web application (with the help of <a style="color:#0086b3;" href="http://github.com/sealious/sealious-www-server">sealious-www-server</a> module), as well as a desktop app (in conjunction with NW.js or Electron).</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="page-codes">
-        <div class="wrapper">
-            <div class="content" id="get-started">
-                <div class="box">
-                    <h1 class="box-text-title el-padding-right">Simple app example</h1>
-                    <div class="box-code el-right">
-                        <pre>
-<span style='color:#a71d5d;'>new</span><span style='color: #795da3;'> Sealious.ChipTypes</span><span style='color:#308080; '>.</span>ResourceType<span style='color:#308080; '>(</span><span style='color:#183691; '>"employee", {</span><span style='color:#308080; '></span><span style='color:#406080; '></span>  
-    fields: <span style='color:#308080; '>[</span>
-        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"first-name"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
-        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"last-name"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"text"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>false</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
-        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"photo"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"file"</span><span style='color:#308080; '>,</span> required<span style='color:#406080; '>:</span> <span style='color:#0086b3; '>true</span><span style='color:#406080; '>}</span>
-        <!--field--><span style='color:#406080; '>{</span>name<span style='color:#406080; '>:</span> <span style='color:#183691; '>"is-friends-with"</span><span style='color:#308080; '>,</span> type<span style='color:#406080; '>:</span> <span style='color:#183691; '>"reference"</span><span style='color:#308080; '>,</span> allowed_types<span style='color:#406080; '>:</span> [<span style='color:#183691; '>"employee"</span><span style='color:#406080; '>]}</span>
-    <span style='color:#308080; '>]</span><span style='color:#308080; '>,</span>
-    access_strategy: <span style='color:#308080; '>{</span>
-        create<span style='color:#406080; '>:</span> <span style='color:#183691; '>"only-admin"</span>,
-        retrieve<span style='color:#406080; '>:</span> <span style='color:#183691; '>"public"</span>
-        }
-<span style='color:#308080; '>});</span>
-</pre>
-                    </div>
-                    <!--old area box-text el-padding-right-->
-                </div>
-            </div>
-        </div>
-        <div class="page-4">
-            <div class="wrapper">
-                <!--fix for FF-->
-                <div class="box-text el-padding-right">Sealious proposes an application architecture that enables creating applications in a highly declarative way. A simple app that would keep information about emplyees needs not much more code than. </div>
-                <div class="row">
-                    <div class="column">
-                        <div class="column-title">Inserting the above code in a Sealious application will cause it to:</div>
-                        <ul>
-                            <li>create the neccessary database schema (we currently support MongoDB, but MySQL (and other db drivers) support is on its way)</li>
-                            <li>publish a JavaScript API for CRUD operations on employee resource type. The api is context-sensitive, that is it will always require information about the user that makes the request to it in order to perform any operation, and based on that context decides whether the operation is permitted for that user, or not. convallis.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <div class="column-title">If sealious-www-server plugin is installed:</div>
-                        <ul>
-                            <li>the web server will publish a REST-ful API, with access strategies reflecting those described in the access_strategy attribute (only admins can create new entries, but anyone can view the entries). The REST-ful API is standards-compliant and is 100% automatically generated - there's no developer involvement needed.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-4">
-            <div class="wrapper">
-                <div class="content">
-                    <h1 class="come">Quite a lot for such a small amount of code, huh? :)
-                    <br>Want to see more? <a href="http://github.com/sealious/Sealious">View Sealious on Github!</a>
-                </h1>
-                    <h1 class="come">Who uses Sealious?</h1>
-                    <div class="placetag">
-                        <a href="http://placetag.pl"><div class="col-img-placetag"></div></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="wrapper">
-                <div class="footer-left">
-                    <a href="http://www.photo-natur.de/">The seal photo was taken by Andreas Trepte.</a>
-                </div>
-                <div class="footer-right">
-                    <span>© 2015</span>
-                    <a href="https://github.com/Sealious">Sealious Inc.</a>
-                </div>
-            </div>
-        </footer>
+    Redirecting...
 </body>
 
 </html>
